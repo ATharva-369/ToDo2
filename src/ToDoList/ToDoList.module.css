@@ -1,0 +1,80 @@
+body{
+    background-color: rgba(0, 0, 0, 0.855);
+}
+.toDoList{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1{
+    font-size: 4rem;
+    color: white;
+}
+
+button{
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.5s ease;
+}
+button:hover{
+    cursor: pointer;
+}
+
+.addButton{
+    background-color: rgba(13, 141, 13, 0.8);
+}
+
+.addButton:hover{
+    background-color: rgba(13, 141, 13, 0.9);
+}
+.deleteButton{
+    background-color: rgba(255, 0, 0, 0.7);
+}
+.deleteButton:hover{
+    background-color: rgba(255, 0, 0, 0.8)
+}
+.moveButton{
+    background-color: rgba(20, 20, 204, 0.8);
+}
+.moveButton:hover{
+    background-color: rgba(20, 20, 204, 0.9);
+}
+
+input[type = "text"]{
+    font-size:1.6rem;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.322);
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.566);
+}
+
+ol{
+    padding: 0px;
+}
+
+li{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 15px;
+    background-color: rgb(227, 219, 219);
+    margin-bottom: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.493);
+    border-radius: 5px;
+    display : flex;
+    align-items: center;
+}
+
+.text{
+    flex : 1
+}
+
+.deleteButton, .moveButton{
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    margin-left: 10px;
+}
