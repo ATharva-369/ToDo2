@@ -106,12 +106,6 @@ function ToDoList(){
                 <button onClick={(e)=>completeTask(e)} className={styles.completeButton}>
                     Done ✔️
                 </button>
-                <button onClick={()=>moveTaskUp(index)} className={styles.moveButton}>
-                    ⬆️
-                </button>
-                <button onClick={()=>moveTaskDown(index)} className={styles.moveButton}>
-                    ⬇️
-                </button>
                 <button onClick={(e)=>deleteTask(e,index)} className={styles.deleteButton}>
                     Delete 🗑️
                 </button>
