@@ -5,6 +5,7 @@ import deleteSound from '../assets/sound2.mp3'
 import moveSound from '../assets/sound3.mp3'
 import addSound from '../assets/sound4.mp3'
 import clearSound from '../assets/sound5.mp3'
+import saveSound from '../assets/sound6.mp3'
 
 function ToDoList(){
 
@@ -68,6 +69,7 @@ function ToDoList(){
 
     function saveLocal(){
         window.localStorage.setItem("tasks",JSON.stringify(tasks))
+        new Audio(saveSound).play()
     };
     function loadTasks(){
         if (JSON.parse(window.localStorage.getItem("tasks")) === null){
