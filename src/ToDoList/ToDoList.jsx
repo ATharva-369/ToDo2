@@ -70,8 +70,8 @@ function ToDoList(){
         window.localStorage.setItem("tasks",JSON.stringify(tasks))
     };
     function loadTasks(){
-        if (JSON.parse(window.localStorage.getItem("tasks")).length === 0){
-            window.localStorage.setItem("tasks",JSON.stringify(["a","b","c"]))
+        if (JSON.parse(window.localStorage.getItem("tasks")) === null){
+            window.localStorage.setItem("tasks",JSON.stringify(["Eat food🍍","Walk the dog🐕‍🦺","Save the world🦸"]))
         }
         setTasks(JSON.parse(window.localStorage.getItem("tasks")))
 
