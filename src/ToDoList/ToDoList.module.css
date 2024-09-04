@@ -35,8 +35,14 @@ button:hover{
 .deleteButton{
     background-color: rgba(255, 0, 0, 0.7);
 }
+.completeButton{
+    background-color: rgba(13, 141, 13, 0.8);
+}
 .deleteButton:hover{
-    background-color: rgba(255, 0, 0, 0.8)
+    background-color: rgba(255, 0, 0, 0.8);
+}
+.completeButton:hover{
+    background-color: rgba(13, 141, 13, 0.9);
 }
 .moveButton{
     background-color: rgba(20, 20, 204, 0.8);
@@ -70,11 +76,11 @@ li{
 }
 
 .text{
-    flex : 1
+    flex : 1;
 }
 
-.deleteButton, .moveButton{
+.deleteButton, .moveButton, .completeButton{
     padding: 8px 12px;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-left: 10px;
 }
