@@ -84,3 +84,7 @@ li{
     font-size: 1.3rem;
     margin-left: 10px;
 }
+
+.saveButton, .addButton{
+    margin-left: 10px;
+}

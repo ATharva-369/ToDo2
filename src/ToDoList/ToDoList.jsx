@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import styles from './ToDoList.module.css'
 import doneSound from '../assets/sound.mp3'
 import deleteSound from '../assets/sound2.mp3'
@@ -8,7 +8,11 @@ import clearSound from '../assets/sound5.mp3'
 
 function ToDoList(){
 
-    const [tasks, setTasks] = useState(["Eat breakfast 🍍", "Walk the dog 🐕‍🦺", "Save the world 🦸"]);
+    useEffect(() => {
+        loadTasks();
+      }, []);
+
+    const [tasks, setTasks] = useState([]);
     const [newTask ,setNewtask] = useState("");
 
     function handleInputChange(e){
@@ -35,7 +39,6 @@ function ToDoList(){
     function deleteTask(e,index){
         const updatedTasks = tasks.filter((_,i) => i !== index);
         setTasks(updatedTasks);
-        console.log(tasks.length)
         if (tasks.length <= 1){
             new Audio(clearSound).play()
         }
@@ -63,6 +66,18 @@ function ToDoList(){
         new Audio(moveSound).play()
     }
 
+    function saveLocal(){
+        window.localStorage.setItem("tasks",JSON.stringify(tasks))
+    };
+    function loadTasks(){
+        if (JSON.parse(window.localStorage.getItem("tasks")).length === 0){
+            window.localStorage.setItem("tasks",JSON.stringify(["a","b","c"]))
+        }
+        setTasks(JSON.parse(window.localStorage.getItem("tasks")))
+
+    };
+      
+
     return(<div className={styles.toDoList}>
         <h1>To-Do List</h1>
         <div>
@@ -74,6 +89,11 @@ function ToDoList(){
             className={styles.addButton}
             onClick = {addTask}>
                 Add
+            </button>
+            <button 
+            className={styles.addButton}
+            onClick = {() => {saveLocal()}}>
+                Save Locally
             </button>
         </div>
 
